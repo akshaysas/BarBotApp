@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import React, { useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import HeaderComponent from './src/components/HeaderComponent';
 import HomeScreen from './src/screens/HomeScreen';
 import BarbotScreen from './src/screens/BarbotScreen';
@@ -30,7 +30,7 @@ function RootStack() {
   return (
     <Stack.Navigator
       initialRouteName="Home"
-      screenOptions={{gestureEnabled: false}}>
+      screenOptions={{ gestureEnabled: false }}>
       <Stack.Screen
         name="Home"
         component={HomeScreen}
