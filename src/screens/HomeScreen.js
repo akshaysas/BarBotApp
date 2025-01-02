@@ -1,17 +1,17 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View, StyleSheet, Dimensions, Alert} from 'react-native';
-import {Button} from 'react-native-elements';
+import { Text, View, StyleSheet, Dimensions, Alert } from 'react-native';
+import { Button } from 'react-native-elements';
 import Spacer from '../components/Spacer';
-import {withNavigationFocus} from '@react-navigation/compat';
-import {ScrollView} from 'react-native-gesture-handler';
+import { withNavigationFocus } from '@react-navigation/compat';
+import { ScrollView } from 'react-native-gesture-handler';
 import MenuItem from '../components/MenuItem';
 import {
   getCocktailMenu,
   getNewBottles,
   getPumpSupportDetails,
 } from '../api/Control';
-import {toUpper} from '../utils/Tools';
+import { toUpper } from '../utils/Tools';
 import ConnectionStatus from '../components/ConnectionStatus';
 import BottleStatus from '../components/BottleStatus';
 
@@ -187,7 +187,7 @@ class HomeScreen extends React.Component {
               <Button
                 title="Manage BarBot"
                 buttonStyle={styles.manageButton}
-                titleStyle={{fontSize: 16}}
+                titleStyle={{ fontSize: 16 }}
                 onPress={() => {
                   this.props.navigation.navigate('ManageBarbot', {
                     reloadMenu: this.reloadCallback.bind(this),
@@ -198,7 +198,7 @@ class HomeScreen extends React.Component {
             <Spacer height={10} />
             <View style={styles.controlView}>
               <Text
-                style={[styles.textStyle, {marginBottom: 8}]}
+                style={[styles.textStyle, { marginBottom: 8 }]}
                 onPress={this.reloadCallback.bind(this)}>
                 Menu
               </Text>
